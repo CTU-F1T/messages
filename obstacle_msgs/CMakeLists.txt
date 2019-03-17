@@ -5,6 +5,7 @@ find_package(catkin REQUIRED
     COMPONENTS
     message_generation
     geometry_msgs
+    std_msgs
 )
 
 add_message_files(
@@ -13,9 +14,11 @@ add_message_files(
     TriangleObstacle.msg
     CircleObstacle.msg
     Obstacles.msg
+    ObstaclesStamped.msg
 )
 
 generate_messages(
     DEPENDENCIES
     geometry_msgs
+    std_msgs
 )
