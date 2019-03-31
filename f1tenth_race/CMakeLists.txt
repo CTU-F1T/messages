@@ -3,7 +3,6 @@ project(f1tenth_race)
 
 find_package(catkin REQUIRED
     COMPONENTS
-    rospy
     message_generation
 )
 
