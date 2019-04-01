@@ -15,6 +15,7 @@ add_message_files(
     CircleObstacle.msg
     Obstacles.msg
     ObstaclesStamped.msg
+    ParkingSlot.msg
 )
 
 generate_messages(
