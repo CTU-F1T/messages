@@ -22,3 +22,5 @@ generate_messages(
     geometry_msgs
     std_msgs
 )
+
+catkin_package()
