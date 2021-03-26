@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <package>
   <name>f1tenth_race</name>
-  <version>0.0.0</version>
+  <version>0.0.1</version>
   <description>
     This package is used as a remainder of the old v.0 project. In this
     version it is temporarily used as an holder for two messages, that

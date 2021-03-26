@@ -16,3 +16,5 @@ generate_messages(
     DEPENDENCIES
     geometry_msgs
 )
+
+catkin_package()
