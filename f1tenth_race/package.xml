@@ -1,0 +1,24 @@
+<?xml version="1.0"?>
+<package>
+  <name>f1tenth_race</name>
+  <version>0.0.1</version>
+  <description>
+    This package is used as a remainder of the old v.0 project. In this
+    version it is temporarily used as an holder for two messages, that
+    are used for communication on the very low level.
+  </description>
+
+  <maintainer email="klapajar@fel.cvut.cz">Jaroslav Klapálek</maintainer>
+
+  <license>GPLv3</license>
+
+  <author email="vajnamar@fel.cvut.cz">Martin Vajnar</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- build_depend libraries -->
+  <build_depend>message_generation</build_depend>
+
+  <!-- run_depend libraries -->
+  <run_depend>message_runtime</run_depend>
+</package>
