@@ -1,28 +1,34 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>messages</name>
   <version>0.0.0</version>
   <description>
     Custom ROS message definitions for our nodes.
   </description>
 
-  <maintainer email="klapajar@fel.cvut.cz">Jaroslav Klapálek</maintainer>
+  <maintainer email="f1tenth@rtime.felk.cvut.cz">F1tenth CTU Community</maintainer>
 
   <license>TODO</license>
 
   <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
 
+  <url type="repository">https://github.com/CTU-F1T/messages</url>
+
   <buildtool_depend>catkin</buildtool_depend>
 
-  <!-- run_depend libraries -->
-  <run_depend>command_msgs</run_depend>
-  <run_depend>f1tenth_race</run_depend>
-  <run_depend>obstacle_msgs</run_depend>
-  <run_depend>plan_msgs</run_depend>
-  <run_depend>trajectory</run_depend>
-  <run_depend>vesc_msgs</run_depend>
+  <!-- exec_depend libraries -->
+  <exec_depend>command_msgs</exec_depend>
+  <exec_depend>f1tenth_race</exec_depend>
+  <exec_depend>obstacle_msgs</exec_depend>
+  <exec_depend>plan_msgs</exec_depend>
+  <exec_depend>trajectory</exec_depend>
+  <exec_depend>vesc_msgs</exec_depend>
 
   <export>
     <metapackage/>
+    <index url="git@github.com:CTU-F1T/messages.git" />
   </export>
 </package>

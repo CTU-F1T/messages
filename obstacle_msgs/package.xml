@@ -1,16 +1,21 @@
 <?xml version="1.0"?>
-<package>
+<?xml-model
+  href="http://download.ros.org/schema/package_format3.xsd"
+  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<package format="3">
   <name>obstacle_msgs</name>
   <version>0.1.0</version>
   <description>
     Specifies standard obstacle messages.
   </description>
 
-  <maintainer email="klapajar@fel.cvut.cz">Jaroslav Klapálek</maintainer>
+  <maintainer email="f1tenth@rtime.felk.cvut.cz">F1tenth CTU Community</maintainer>
 
   <license>TODO</license>
 
   <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
+
+  <url type="repository">https://github.com/CTU-F1T/messages</url>
 
   <buildtool_depend>catkin</buildtool_depend>
 
@@ -22,5 +27,5 @@
   <build_depend>std_msgs</build_depend>
 
   <!-- run_depend libraries -->
-  <run_depend>message_runtime</run_depend>
+  <exec_depend>message_runtime</exec_depend>
 </package>
