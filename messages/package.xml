@@ -1,0 +1,28 @@
+<?xml version="1.0"?>
+<package>
+  <name>messages</name>
+  <version>0.0.0</version>
+  <description>
+    Custom ROS message definitions for our nodes.
+  </description>
+
+  <maintainer email="klapajar@fel.cvut.cz">Jaroslav Klapálek</maintainer>
+
+  <license>TODO</license>
+
+  <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
+
+  <buildtool_depend>catkin</buildtool_depend>
+
+  <!-- run_depend libraries -->
+  <run_depend>command_msgs</run_depend>
+  <run_depend>f1tenth_race</run_depend>
+  <run_depend>obstacle_msgs</run_depend>
+  <run_depend>plan_msgs</run_depend>
+  <run_depend>trajectory</run_depend>
+  <run_depend>vesc_msgs</run_depend>
+
+  <export>
+    <metapackage/>
+  </export>
+</package>
