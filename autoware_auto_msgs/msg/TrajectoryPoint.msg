@@ -1,0 +1,16 @@
+# Point of a Trajectory
+# Zero heading corresponds to the positive x direction in the given frame.
+# All fields should default to 0.
+# As noted in the original message, it is possible that more fields will
+# be added overtime (e.g., jerk).
+# Note: We use type duration instead of std_msgs/Duration to make the API
+# consistent. The only difference is, that 'time_from_start.nsecs' is int32,
+# whereas it is uint32 in ROS2.
+duration time_from_start                # ROS duration, .secs and .nsecs
+geometry_msgs/Pose pose
+float32 longitudinal_velocity_mps       # [m.s^-1]
+float32 lateral_velocity_mps            # [m.s^-1]
+float32 acceleration_mps2               # [m.s^-2]
+float32 heading_rate_rps                # [rad.s^-1]
+float32 front_wheel_angle_rad           # [rad]
+float32 rear_wheel_angle_rad            # [rad]

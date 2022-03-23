@@ -4,7 +4,7 @@
   schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>messages</name>
-  <version>0.1.0</version>
+  <version>0.2.0</version>
   <description>
     Custom ROS message definitions for our nodes.
   </description>
@@ -26,6 +26,7 @@
   <exec_depend>plan_msgs</exec_depend>
   <exec_depend>trajectory</exec_depend>
   <exec_depend>vesc_msgs</exec_depend>
+  <exec_depend>autoware_auto_msgs</exec_depend>
 
   <export>
     <metapackage/>
