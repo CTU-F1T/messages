@@ -1,4 +1,20 @@
-cmake_minimum_required(VERSION 2.8.3)
+set(ROS_VERSION $ENV{ROS_VERSION})
+
+if (NOT DEFINED ROS_VERSION OR '${ROS_VERSION} STREQUAL '1)
+    set (ROS_VERSION 1)
+    cmake_minimum_required(VERSION 2.8.3)
+else()
+    cmake_minimum_required(VERSION 3.3)
+endif()
+
 project(messages)
-find_package(catkin REQUIRED)
-catkin_metapackage()
+
+if (ROS_VERSION EQUAL 1)
+    find_package(catkin REQUIRED)
+    catkin_metapackage()
+elseif (ROS_VERSION EQUAL 2)
+    find_package(ament_cmake REQUIRED)
+    ament_package()
+else()
+    message(FATAL_ERROR "ROS_VERSION is not set.")
+endif()

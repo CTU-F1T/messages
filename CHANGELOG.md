@@ -4,6 +4,17 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Unreleased
+## 0.3.0 - 2023-04-26
+### Added
+- `drive_api_msgs` a ROS2 only package with messages for Drive-API.
+- `teensy_drive_msgs` a ROS2 only package with messages for Teensy.
+- Repository can be built in ROS2 using `colcon`.
+
+### Changed
+- Message type `autoware_auto_msgs/TrajectoryPoint.msg` is created based on the ROS version.
+- `messages` is now an ignored metapackage.
+- Bump all versions to common `0.1.0`.
+
 ## 0.2.0 - 2022-03-23
 ### Added
 - `autoware_auto_msgs` a partial port of ROS2 package, to be used for trajectories.

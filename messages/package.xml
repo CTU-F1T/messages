@@ -4,7 +4,7 @@
   schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>messages</name>
-  <version>0.2.0</version>
+  <version>0.3.0</version>
   <description>
     Custom ROS message definitions for our nodes.
   </description>
@@ -17,19 +17,10 @@
 
   <url type="repository">https://github.com/CTU-F1T/messages</url>
 
-  <buildtool_depend>catkin</buildtool_depend>
-
-  <!-- exec_depend libraries -->
-  <exec_depend>command_msgs</exec_depend>
-  <exec_depend>f1tenth_race</exec_depend>
-  <exec_depend>obstacle_msgs</exec_depend>
-  <exec_depend>plan_msgs</exec_depend>
-  <exec_depend>trajectory</exec_depend>
-  <exec_depend>vesc_msgs</exec_depend>
-  <exec_depend>autoware_auto_msgs</exec_depend>
+  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
 
   <export>
-    <metapackage/>
+    <metapackage condition="$ROS_VERSION == 1" />
     <index url="git@github.com:CTU-F1T/messages.git" />
   </export>
 </package>

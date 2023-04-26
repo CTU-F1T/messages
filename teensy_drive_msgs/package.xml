@@ -1,42 +1,32 @@
 <?xml version="1.0"?>
-<?xml-model
-  href="http://download.ros.org/schema/package_format3.xsd"
-  schematypens="http://www.w3.org/2001/XMLSchema"?>
+<?xml-model href="http://download.ros.org/schema/package_format3.xsd" schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
-  <name>command_msgs</name>
+  <name>teensy_drive_msgs</name>
   <version>0.1.0</version>
   <description>
-    ROS message definitions for commanding nodes (e.g. Drive-API).
+    Message definitions for teensy_drive package.
   </description>
 
   <maintainer email="f1tenth@rtime.felk.cvut.cz">F1tenth CTU Community</maintainer>
 
-  <license>GPLv3</license>
+  <license>Apache License 2.0</license>
 
+  <author email="vajnamar@fel.cvut.cz">Martin Vajnar</author>
   <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
 
   <url type="repository">https://github.com/CTU-F1T/messages</url>
 
-  <buildtool_depend condition="$ROS_VERSION == 1">catkin</buildtool_depend>
   <buildtool_depend condition="$ROS_VERSION == 2">ament_cmake</buildtool_depend>
   <buildtool_depend condition="$ROS_VERSION == 2">rosidl_default_generators</buildtool_depend>
 
-  <!-- build_depend libraries -->
-  <build_depend condition="$ROS_VERSION == 1">message_generation</build_depend>
-
-  <!-- build_depend message types -->
-  <build_depend>std_msgs</build_depend>
-
   <!-- run_depend libraries -->
-  <exec_depend condition="$ROS_VERSION == 1">message_runtime</exec_depend>
   <exec_depend condition="$ROS_VERSION == 2">rosidl_default_runtime</exec_depend>
 
   <member_of_group condition="$ROS_VERSION == 2">rosidl_interface_packages</member_of_group>
 
-  <!-- Any other parameters can be stored here. -->
   <export>
-    <index url="git@github.com:CTU-F1T/messages.git" />
-
+    <!-- Even though this package is ROS2 only, catkin has to be here
+         because of older 'catkin_pkg' that ignores conditions. -->
     <build_type condition="$ROS_VERSION == 1">catkin</build_type>
     <build_type condition="$ROS_VERSION == 2">ament_cmake</build_type>
   </export>
