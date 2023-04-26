@@ -1,36 +1,46 @@
-cmake_minimum_required(VERSION 3.5)
+set(ROS_VERSION $ENV{ROS_VERSION})
+
+if (NOT DEFINED ROS_VERSION OR '${ROS_VERSION} STREQUAL '1)
+    set (ROS_VERSION 1)
+    cmake_minimum_required(VERSION 2.8.3)
+else()
+    cmake_minimum_required(VERSION 3.3)
+endif()
+
 project(drive_api_msgs)
 
-# Default to C99
-if (NOT CMAKE_C_STANDARD)
-  set(CMAKE_C_STANDARD 99)
-endif ()
+if (ROS_VERSION EQUAL 2)
+    # Default to C99
+    if (NOT CMAKE_C_STANDARD)
+      set(CMAKE_C_STANDARD 99)
+    endif ()
 
-# Default to C++14
-if (NOT CMAKE_CXX_STANDARD)
-  set(CMAKE_CXX_STANDARD 14)
-endif ()
+    # Default to C++14
+    if (NOT CMAKE_CXX_STANDARD)
+      set(CMAKE_CXX_STANDARD 14)
+    endif ()
 
-if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-  add_compile_options(-Wall -Wextra -Wpedantic)
-endif ()
+    if (CMAKE_COMPILER_IS_GNUCXX OR CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+      add_compile_options(-Wall -Wextra -Wpedantic)
+    endif ()
 
-# find dependencies
-find_package(ament_cmake REQUIRED)
-find_package(rosidl_default_generators REQUIRED)
+    # find dependencies
+    find_package(ament_cmake REQUIRED)
+    find_package(rosidl_default_generators REQUIRED)
 
-# IDL definitions
-set(msg_files
-  # "msg/Message.msg"
-  "msg/DriveApiValues.msg"
-)
-set(srv_files
-  # "srv/Service.srv"
-)
-rosidl_generate_interfaces(${PROJECT_NAME}
-  ${msg_files}
-  # DEPENDENCIES std_msgs
-)
-ament_export_dependencies(rosidl_default_runtime)
+    # IDL definitions
+    set(msg_files
+      # "msg/Message.msg"
+      "msg/DriveApiValues.msg"
+    )
+    set(srv_files
+      # "srv/Service.srv"
+    )
+    rosidl_generate_interfaces(${PROJECT_NAME}
+      ${msg_files}
+      # DEPENDENCIES std_msgs
+    )
+    ament_export_dependencies(rosidl_default_runtime)
 
-ament_package()
+    ament_package()
+endif()
