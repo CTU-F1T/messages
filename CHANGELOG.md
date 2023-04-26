@@ -4,6 +4,7 @@ All notable changes to this project will be documented in this file.
 The format is based on [Keep a Changelog](http://keepachangelog.com/).
 
 ## Unreleased
+## 0.3.0 - 2023-04-26
 ### Added
 - `drive_api_msgs` a ROS2 only package with messages for Drive-API.
 - `teensy_drive_msgs` a ROS2 only package with messages for Teensy.
