@@ -4,7 +4,7 @@
   schematypens="http://www.w3.org/2001/XMLSchema"?>
 <package format="3">
   <name>f1tenth_race</name>
-  <version>0.0.1</version>
+  <version>0.1.0</version>
   <description>
     This package is used as a remainder of the old v.0 project. In this
     version it is temporarily used as an holder for two messages, that

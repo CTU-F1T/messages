@@ -12,6 +12,7 @@ The format is based on [Keep a Changelog](http://keepachangelog.com/).
 ### Changed
 - Message type `autoware_auto_msgs/TrajectoryPoint.msg` is created based on the ROS version.
 - `messages` is now an ignored metapackage.
+- Bump all versions to common `0.1.0`.
 
 ## 0.2.0 - 2022-03-23
 ### Added
