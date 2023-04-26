@@ -12,9 +12,9 @@
   <license>Apache License 2.0</license>
 
   <author email="vajnamar@fel.cvut.cz">Martin Vajnar</author>
-    <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
+  <author email="klapajar@fel.cvut.cz">Jaroslav Klapálek</author>
 
-    <url type="repository">https://github.com/CTU-F1T/messages</url>
+  <url type="repository">https://github.com/CTU-F1T/messages</url>
 
   <buildtool_depend>ament_cmake</buildtool_depend>
   <buildtool_depend>rosidl_default_generators</buildtool_depend>
