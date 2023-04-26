@@ -1,4 +1,4 @@
 # CommandArrayStamped message
 # List of commands, with a timestamp
-Header header
+std_msgs/Header header
 command_msgs/Command[] commands
