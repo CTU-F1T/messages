@@ -6,7 +6,7 @@
 # Note: We use type duration instead of std_msgs/Duration to make the API
 # consistent. The only difference is, that 'time_from_start.nsecs' is int32,
 # whereas it is uint32 in ROS2.
-duration time_from_start                # ROS duration, .secs and .nsecs
+@DURATION_TYPE@ time_from_start                # ROS duration, .secs and .nsecs
 geometry_msgs/Pose pose
 float32 longitudinal_velocity_mps       # [m.s^-1]
 float32 lateral_velocity_mps            # [m.s^-1]
