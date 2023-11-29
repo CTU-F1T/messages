@@ -33,31 +33,32 @@ if (ROS_VERSION EQUAL 1)
 
     catkin_package()
 elseif (ROS_VERSION EQUAL 2)
-    find_package(ament_cmake REQUIRED)
-    find_package(rosidl_default_generators REQUIRED)
-    foreach (pkg ${dep_pkgs})
-        find_package(${pkg} REQUIRED)
-    endforeach()
-
-    # https://stackoverflow.com/a/59155344
-    function(list_transform_prepend var prefix)
-        set(temp "")
-        foreach(f ${${var}})
-            list(APPEND temp "${prefix}${f}")
-        endforeach()
-        set(${var} "${temp}" PARENT_SCOPE)
-    endfunction()
-
-    list_transform_prepend(msg_files "msg/")
-
-    rosidl_generate_interfaces(${PROJECT_NAME}
-        ${msg_files}
-        DEPENDENCIES
-        ${dep_pkgs}
-    )
-    ament_export_dependencies(rosidl_default_runtime)
-
-    ament_package()
+#    find_package(ament_cmake REQUIRED)
+#    find_package(rosidl_default_generators REQUIRED)
+#    foreach (pkg ${dep_pkgs})
+#        find_package(${pkg} REQUIRED)
+#    endforeach()
+#
+#    # https://stackoverflow.com/a/59155344
+#    function(list_transform_prepend var prefix)
+#        set(temp "")
+#        foreach(f ${${var}})
+#            list(APPEND temp "${prefix}${f}")
+#        endforeach()
+#        set(${var} "${temp}" PARENT_SCOPE)
+#    endfunction()
+#
+#    list_transform_prepend(msg_files "msg/")
+#
+#    rosidl_generate_interfaces(${PROJECT_NAME}
+#        ${msg_files}
+#        DEPENDENCIES
+#        ${dep_pkgs}
+#    )
+#    ament_export_dependencies(rosidl_default_runtime)
+#
+#    ament_package()
+    message("This package is enabled for ROS1 only. Skipping.")
 else()
     message(FATAL_ERROR "ROS_VERSION is not set.")
 endif()
